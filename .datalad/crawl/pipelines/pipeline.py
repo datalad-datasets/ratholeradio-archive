@@ -3,7 +3,7 @@ Pipeline to fetch/update ratholeradio shows
 """
 from __future__ import print_function
 import re
-from os.path import join as opj
+from os.path import join as opj, basename
 
 from datalad.utils import updated
 from datalad.crawler.nodes.annex import Annexificator
@@ -63,17 +63,19 @@ def process_episode(data):
             lgr.debug("Composing %s", cue_file)
             data_ = data.copy()
             data_['EXT'] = ext.upper()
-            data_['ext_file'] = ext_file
+            data_['ext_file'] = basename(ext_file)
             with open(cue_file, 'w') as f:
                 f.write(u"""REM GENRE "Eclectic music from around the web"
 REM DATE "{year}"
 PERFORMER "Dan Lynch"
-TITLE "Episode {episode}"
+ALBUMARTIST "Dan Lynch"
+TITLE "Rathole Radio ep. {episode}"
 FILE "{ext_file}" {EXT}
 TRACK 01 AUDIO
  TITLE "Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
+ COMMENT "http://ratholeradio.org"
 """.format(**data_).encode('utf-8'))
 
                 for i, track in enumerate(tracks, 2):
@@ -83,12 +85,13 @@ TRACK {index:02d} AUDIO
  PERFORMER "{artist}"
  INDEX 01 {time}:00
 """.format(index=i, **track)
+                    if track['license']:
+                        track_entry += """ COMMENT "{license}"\n""".format(**track)
                     f.write(track_entry.encode('utf-8'))
             # we just need to annex the cue_file, no other information to be passed
             yield {
                 'filename': cue_file
             }
-
 
 
 def pipeline():
@@ -115,8 +118,5 @@ def pipeline():
             process_episode,
             annex
         ],
-        # [
-        #     a_href_match('.*/RR.*\.(ogg|mp3)'),
-        #     annex
-        # ]
+        annex.finalize
     ]

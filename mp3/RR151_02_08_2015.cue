@@ -1,0 +1,45 @@
+REM GENRE "Eclectic music from around the web"
+REM DATE "2015"
+PERFORMER "Dan Lynch"
+TITLE "Episode 151"
+FILE "mp3/RR151_02_08_2015.mp3" MP3
+TRACK 01 AUDIO
+ TITLE "Introduction"
+ PERFORMER "Dan Lynch"
+ INDEX 01 00:00:00
+TRACK 02 AUDIO
+ TITLE "Hunger For Life"
+ PERFORMER "The Nuri"
+ INDEX 01 00:10:00
+TRACK 03 AUDIO
+ TITLE "Sporting Rhymes"
+ PERFORMER "Rosko"
+ INDEX 01 07:19:00
+TRACK 04 AUDIO
+ TITLE "GO!GO!GO!"
+ PERFORMER "Emerald Park"
+ INDEX 01 10:11:00
+TRACK 05 AUDIO
+ TITLE "Suppressed Love"
+ PERFORMER "Arising"
+ INDEX 01 18:40:00
+TRACK 06 AUDIO
+ TITLE "Khaleesi"
+ PERFORMER "Grace Valhalla"
+ INDEX 01 23:15:00
+TRACK 07 AUDIO
+ TITLE "Quiche Lorraine"
+ PERFORMER "Boom Boom Beckett"
+ INDEX 01 33:08:00
+TRACK 08 AUDIO
+ TITLE "Breakthrough"
+ PERFORMER "MindFlow"
+ INDEX 01 45:01:00
+TRACK 09 AUDIO
+ TITLE "Hide"
+ PERFORMER "Beams Of Strange"
+ INDEX 01 51:42:00
+TRACK 10 AUDIO
+ TITLE "For Your Ears Only"
+ PERFORMER "Rosko"
+ INDEX 01 58:27:00
