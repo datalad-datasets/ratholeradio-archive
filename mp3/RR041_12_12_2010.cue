@@ -45,11 +45,15 @@ TRACK 08 AUDIO
  INDEX 01 34:48:00
  COMMENT "CC BY Licensed"
 TRACK 09 AUDIO
+ TITLE "Live track I  played an acoustic rendition of “Broken Stones” by Paul Weller. The  original is all played on a Fender Rhodes electric piano and while I can  play the keyboard I didn’t have one to hand. So this is on acoustic  guitar but it works ok. It won the song vote with the live listeners  which you can see the results of here."
+ PERFORMER "George Ellinas"
+ INDEX 01 41:50:00
+TRACK 10 AUDIO
  TITLE "Sell My Pulse"
  PERFORMER "Flykkiller"
  INDEX 01 46:20:00
  COMMENT "CC BY-NC-ND Licensed"
-TRACK 10 AUDIO
+TRACK 11 AUDIO
  TITLE "A Part Of Me"
  PERFORMER "Last Sunday"
  INDEX 01 57:09:00

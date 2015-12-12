@@ -25,21 +25,29 @@ TRACK 04 AUDIO
  INDEX 01 12:22:00
  COMMENT "Copyright Licensed"
 TRACK 05 AUDIO
+ TITLE "Interview guest: MC Frontalot"
+ PERFORMER "Mc Frontalot"
+ INDEX 01 16:20:00
+TRACK 06 AUDIO
  TITLE "Bitchslap"
  PERFORMER "Mc Hawking (feat Frontalot)"
  INDEX 01 33:16:00
  COMMENT "Copyright Licensed"
-TRACK 06 AUDIO
+TRACK 07 AUDIO
+ TITLE "Interview continued"
+ PERFORMER "Mc Hawking (feat Frontalot)"
+ INDEX 01 37:28:00
+TRACK 08 AUDIO
  TITLE "First World Problem"
  PERFORMER "Mc Frontalot"
  INDEX 01 48:35:00
  COMMENT "Copyright Licensed"
-TRACK 07 AUDIO
+TRACK 09 AUDIO
  TITLE "Dan Lynch"
  PERFORMER "Live Tune"
  INDEX 01 55:18:00
  COMMENT "Trouble In Egypt"
-TRACK 08 AUDIO
+TRACK 10 AUDIO
  TITLE "Best Time"
  PERFORMER "BURNOUT"
  INDEX 01 63:05:00

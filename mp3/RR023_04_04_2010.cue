@@ -53,3 +53,7 @@ TRACK 10 AUDIO
  PERFORMER "The Lone Gunmen"
  INDEX 01 44:12:00
  COMMENT "License Unknown"
+TRACK 11 AUDIO
+ TITLE "The Mystery Song. All I know is that the file is called “georgew.mp3”. If you know where it’s from and who it’s by please let me know. License Unknown Obviously"
+ PERFORMER "The Lone Gunmen"
+ INDEX 01 55:23:00

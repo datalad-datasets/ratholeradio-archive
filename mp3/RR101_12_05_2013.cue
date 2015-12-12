@@ -20,31 +20,39 @@ TRACK 03 AUDIO
  INDEX 01 11:57:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 04 AUDIO
+ TITLE "A chat with guest and fellow podcaster Kevin MacPhail. Host of TuxJam about his new show CCJam."
+ PERFORMER "I’m Bad Like Jesse James"
+ INDEX 01 19:05:00
+TRACK 05 AUDIO
  TITLE "Beneath The Gate"
  PERFORMER "Stormy Mondays"
  INDEX 01 36:15:00
  COMMENT "CC BY-NC-ND Licensed"
-TRACK 05 AUDIO
+TRACK 06 AUDIO
  TITLE "Dancing On The Slope"
  PERFORMER "Visciera"
  INDEX 01 41:45:00
  COMMENT "CC BY-NC-SA Licensed"
-TRACK 06 AUDIO
+TRACK 07 AUDIO
  TITLE "Girl In A Room Remix"
  PERFORMER "Antiqcool"
  INDEX 01 45:30:00
  COMMENT "CC BY-NC-ND Licensed"
-TRACK 07 AUDIO
+TRACK 08 AUDIO
+ TITLE "An audio message from listener Tim Dobson, on a mountain somewhere."
+ PERFORMER "Antiqcool"
+ INDEX 01 52:55:00
+TRACK 09 AUDIO
  TITLE "Enemies (Rough mix, pre-release)"
  PERFORMER "20lb Sounds"
  INDEX 01 54:42:00
  COMMENT "CC BY-SA Licensed"
-TRACK 08 AUDIO
+TRACK 10 AUDIO
  TITLE "New August"
  PERFORMER "Ragz Nordset"
  INDEX 01 61:07:00
  COMMENT "All Rights Reserved"
-TRACK 09 AUDIO
+TRACK 11 AUDIO
  TITLE "No Time To Waste"
  PERFORMER "FM Pilots"
  INDEX 01 70:10:00

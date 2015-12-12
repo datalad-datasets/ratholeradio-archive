@@ -20,21 +20,25 @@ TRACK 03 AUDIO
  INDEX 01 05:49:00
  COMMENT "License Unknown"
 TRACK 04 AUDIO
+ TITLE "Interview guest: Nick Tann"
+ PERFORMER "Insanity Hurts"
+ INDEX 01 19:30:00
+TRACK 05 AUDIO
  TITLE "One Night Stand (Vinyl Project Version)"
  PERFORMER "Nick Tann"
  INDEX 01 35:33:00
  COMMENT "License Unknown"
-TRACK 05 AUDIO
+TRACK 06 AUDIO
  TITLE "How Can It Be Wrong"
  PERFORMER "Nick Tann"
  INDEX 01 71:18:00
  COMMENT "License Unknown"
-TRACK 06 AUDIO
+TRACK 07 AUDIO
  TITLE "La Face Cachee De La Lune"
  PERFORMER "Greg Baumont"
  INDEX 01 77:12:00
  COMMENT "CC BY-NC-ND Licensed"
-TRACK 07 AUDIO
+TRACK 08 AUDIO
  TITLE "Green Eyes"
  PERFORMER "W.E.I.R.D"
  INDEX 01 86:55:00

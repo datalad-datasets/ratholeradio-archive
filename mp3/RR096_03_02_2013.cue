@@ -50,11 +50,15 @@ TRACK 09 AUDIO
  INDEX 01 47:52:00
  COMMENT "CC BY-NC Licensed"
 TRACK 10 AUDIO
+ TITLE "LIVE TRACK: “Long December” by Counting Crows, a request by email. I played a guitar arrangement of the tune."
+ PERFORMER "Keyboard Rebel"
+ INDEX 01 53:58:00
+TRACK 11 AUDIO
  TITLE "Pain Of Life"
  PERFORMER "Drunksouls"
  INDEX 01 59:17:00
  COMMENT "CC BY-NC-ND Licensed"
-TRACK 11 AUDIO
+TRACK 12 AUDIO
  TITLE "The Promised Land"
  PERFORMER "The Hyper Actives"
  INDEX 01 69:31:00

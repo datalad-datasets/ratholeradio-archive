@@ -19,8 +19,6 @@ def process_episode(data):
     # create cue out of
     lgr.info("Processing URL: {url}".format(**data))
     items = []
-    if data['url'].endswith('ep1/'):
-        import pdb; pdb.set_trace()
     # some times \u2014 was used to split up pairs
     for item in data['items']:
         items.extend(item.split(u'\u2014'))
@@ -41,10 +39,10 @@ def process_episode(data):
                 time, title = fields
                 if "Originally by" in title:
                     # Let's do it nice
-                    reg = re.match("(?P<title>.*?)\s*\(Originally by\s*(?P<orig_author>.+)\)\s*")
+                    reg = re.match("\s*(?P<title>.*?)\s*\(Originally by\s*(?P<orig_author>.+)\)\s*", title)
                     matches = reg.groupdict()
                     artist = "Dan Lynch (originally by {orig_author})".format(**matches)
-                    title = matches[title]
+                    title = matches['title']
                 license = None
             else:
                 lgr.debug("Got %d fields: %s" % (len(fields), str(fields)))
@@ -77,15 +75,17 @@ def process_episode(data):
         # release month/date some times was different from the file date. So let's
         # reparse the filename again
         reg = re.match(
-            "[A-Za-z]+"
-            "(?P<episode>[0-9]+)[-_]"
+            "[A-Za-z_]+"
+            "((?P<episode>[0-9]+)[-_])?"
             "(?P<date>[0-9]{1,2})[-_]"
             "(?P<month>[0-9]{1,2})[-_]"
             "(?P<year>[0-9]{2,4})\.(?P<ext>(mp3|ogg))", ext_file)
 
         if not reg:
-            raise ValueError("Count not parse %s" % ext_file)
+            raise ValueError("Could not parse %s" % ext_file)
         parts = reg.groupdict()
+        if not 'episode' in parts:
+            parts['episode'] = data['episode']
         if len(parts['year']) == 2:
             parts['year'] = '20' + parts['year']
         # reconstitute the filename
@@ -153,16 +153,21 @@ def pipeline():
     return [
         [
             crawl_url("http://ratholeradio.org",
+            #crawl_url("http://ratholeradio.org/page/17/",
                       matchers=[
                           a_href_match('.*/page/[0-9]+'),
                       ]),
             a_href_match(".*/(?P<year>2[0-9]{3})/(?P<month>[0-9]{1,2})/ep(?P<episode>[0-9]+)/?$"),
             crawl_url(),
             [
-                sub({'response': ('</?strong>', ''), # ep 7? used also lots of strongs
-                     'response': ('</?span[^>]*>', ''),  # ep 74 used spans too extensively
-                     'response': (u'(\d{2}:\d{2}) \u2014 ', r'\1 \u2013 '), # ep 7 used long dash which later was used to bind pairs
-                     }),
+                sub({'response': {
+                        '</?strong>': '', # ep 7? used also lots of strongs
+                        '</?span[^>]*>': '',  # ep 74 used spans too extensively
+                        # in raw HTML at this point
+                        r'(\d{2}:\d{2}) &#8212;': r'\1 &#8211;', # ep 7 used long dash which later was used to bind pairs
+                        #r'(\d{2}:\d{2}) \u2014': r'\1 \u2013' # ep 7 used long dash which later was used to bind pairs
+                        }
+                    }),
                 css_match('div#page .entry',
                           xpaths={'items': u"//*[contains(text(), '–')]",
                                   #'mp3': "//a[text()='Download Mp3']//@href",

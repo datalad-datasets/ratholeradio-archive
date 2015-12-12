@@ -47,11 +47,15 @@ TRACK 08 AUDIO
  INDEX 01 39:14:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 09 AUDIO
+ TITLE "LIVE SONG: My rendition of “Re: Your Brains” by JoCo seemed appropriate for Halloween."
+ PERFORMER "Urban Castle Magic"
+ INDEX 01 42:20:00
+TRACK 10 AUDIO
  TITLE "Elevators"
  PERFORMER "Starside Casino"
  INDEX 01 47:23:00
  COMMENT "CC BY-NC-ND Licensed"
-TRACK 10 AUDIO
+TRACK 11 AUDIO
  TITLE "The One"
  PERFORMER "Audiosport"
  INDEX 01 56:01:00

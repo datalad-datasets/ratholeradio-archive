@@ -40,11 +40,15 @@ TRACK 07 AUDIO
  INDEX 01 41:32:00
  COMMENT "License Unknown"
 TRACK 08 AUDIO
+ TITLE "LIVE SONG: These Days by Jackson Browne."
+ PERFORMER "Misth"
+ INDEX 01 48:01:00
+TRACK 09 AUDIO
  TITLE "Observations 1: In Her Eyes"
  PERFORMER "Pierre Masse"
  INDEX 01 52:31:00
  COMMENT "CC BY-NC-SA Licensed"
-TRACK 09 AUDIO
+TRACK 10 AUDIO
  TITLE "Psychosomatic Heart Failure"
  PERFORMER "The Gasoline Brothers"
  INDEX 01 64:52:00

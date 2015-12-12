@@ -45,16 +45,20 @@ TRACK 08 AUDIO
  INDEX 01 29:55:00
  COMMENT "CC BY-ND Licensed"
 TRACK 09 AUDIO
+ TITLE "LIVE SONG: “Long May You Run” by Neil Young. http://www.elyricsworld.com/long_may_you_run_lyrics_neil_young.html"
+ PERFORMER "BertycoX"
+ INDEX 01 37:31:00
+TRACK 10 AUDIO
  TITLE "Cellule"
  PERFORMER "Silence"
  INDEX 01 43:08:00
  COMMENT "CC BY-SA Licensed"
-TRACK 10 AUDIO
+TRACK 11 AUDIO
  TITLE "The Point Of No Return"
  PERFORMER "Roger Subirana Mata"
  INDEX 01 46:45:00
  COMMENT "CC BY-NC-ND Licensed"
-TRACK 11 AUDIO
+TRACK 12 AUDIO
  TITLE "Fuck Sony entertainment"
  PERFORMER "Sid der Liedermacher"
  INDEX 01 57:25:00
