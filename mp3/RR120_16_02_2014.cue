@@ -17,8 +17,7 @@ TRACK 02 AUDIO
 TRACK 03 AUDIO
  TITLE "Piano Trio No. 2 In E-Flat Major"
  PERFORMER "Eggma Trio"
- INDEX 01 -
-10:46:00
+ INDEX 01 10:46:00
  COMMENT "License Unknown"
 TRACK 04 AUDIO
  TITLE "Sleeping Beauty &amp; The Beast"
@@ -28,8 +27,7 @@ TRACK 04 AUDIO
 TRACK 05 AUDIO
  TITLE "Wookey Hole"
  PERFORMER "Farfletched"
- INDEX 01 -
-26:40:00
+ INDEX 01 26:40:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 06 AUDIO
  TITLE "Bird On A Wire"
@@ -39,8 +37,7 @@ TRACK 06 AUDIO
 TRACK 07 AUDIO
  TITLE "Papillons"
  PERFORMER "WhiteRoom"
- INDEX 01 -
-37:23:00
+ INDEX 01 37:23:00
  COMMENT "CC BY-SA Licensed"
 TRACK 08 AUDIO
  TITLE "The Ghost Of Emma Goldman"

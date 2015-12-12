@@ -17,8 +17,7 @@ TRACK 02 AUDIO
 TRACK 03 AUDIO
  TITLE "Indestructible"
  PERFORMER "Songs Of Trees"
- INDEX 01 -
-13:25:00
+ INDEX 01 13:25:00
  COMMENT "License Unknown"
 TRACK 04 AUDIO
  TITLE "Song 3"
@@ -28,8 +27,7 @@ TRACK 04 AUDIO
 TRACK 05 AUDIO
  TITLE "Who’s Your Doctor"
  PERFORMER "Dale Chase"
- INDEX 01 -
-26:18:00
+ INDEX 01 26:18:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 06 AUDIO
  TITLE "I Will Catch Stars For You"

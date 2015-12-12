@@ -42,8 +42,7 @@ TRACK 07 AUDIO
 TRACK 08 AUDIO
  TITLE "No Words (Directors cut)"
  PERFORMER "We are FM"
- INDEX 01 -
-29:45:00
+ INDEX 01 29:45:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 09 AUDIO
  TITLE "“Anna Begins” by Counting Crows. A song I’ve always loved by one of my favourite bands. Check out the album August &amp; Everything After if you’ve never heard it. You can thank me later."

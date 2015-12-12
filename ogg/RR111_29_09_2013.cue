@@ -17,16 +17,14 @@ TRACK 02 AUDIO
 TRACK 03 AUDIO
  TITLE "Bergsgatan"
  PERFORMER "Emerald Park"
- INDEX 01 -
-08:38:00
+ INDEX 01 08:38:00
  COMMENT "CC BY-NC-SA Licensed
 
 16:13"
 TRACK 04 AUDIO
  TITLE "Ballad Of A Hungry Mother"
  PERFORMER "Phil Cook &amp; His Feet"
- INDEX 01 -
-21:58:00
+ INDEX 01 21:58:00
  COMMENT "All Rights Reserved"
 TRACK 05 AUDIO
  TITLE "Hallon"
@@ -36,8 +34,7 @@ TRACK 05 AUDIO
 TRACK 06 AUDIO
  TITLE "At Dawn"
  PERFORMER "Distemper"
- INDEX 01 -
-31:18:00
+ INDEX 01 31:18:00
  COMMENT "CC BY Licensed"
 TRACK 07 AUDIO
  TITLE "Afterlife"

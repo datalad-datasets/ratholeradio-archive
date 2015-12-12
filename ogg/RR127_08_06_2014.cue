@@ -22,8 +22,7 @@ TRACK 03 AUDIO
 TRACK 04 AUDIO
  TITLE "Talk To Me"
  PERFORMER "The Sharp Things"
- INDEX 01 -
-13:19:00
+ INDEX 01 13:19:00
  COMMENT "All Rights Reserved"
 TRACK 05 AUDIO
  TITLE "Bigger On The Inside"
@@ -33,8 +32,7 @@ TRACK 05 AUDIO
 TRACK 06 AUDIO
  TITLE "Hong Kong Gangsters"
  PERFORMER "Carlos Dingo"
- INDEX 01 -
-26:06:00
+ INDEX 01 26:06:00
  COMMENT "CC BY-ND-ND Licensed"
 TRACK 07 AUDIO
  TITLE "Bumming Around"

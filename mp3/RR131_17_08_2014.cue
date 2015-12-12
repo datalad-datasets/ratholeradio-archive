@@ -22,8 +22,7 @@ TRACK 03 AUDIO
 TRACK 04 AUDIO
  TITLE "Melt Into The Sun"
  PERFORMER "Candy Says"
- INDEX 01 -
-12:15:00
+ INDEX 01 12:15:00
  COMMENT "CC BY-SA Licensed"
 TRACK 05 AUDIO
  TITLE "And Now We Stand Against The Wall"
@@ -33,8 +32,7 @@ TRACK 05 AUDIO
 TRACK 06 AUDIO
  TITLE "Late In The Game"
  PERFORMER "20lb Sounds"
- INDEX 01 -
-28:04:00
+ INDEX 01 28:04:00
  COMMENT "CC BY-SA Licensed"
 TRACK 07 AUDIO
  TITLE "Hoarder Song- CC BY-NC-SA Licensed"

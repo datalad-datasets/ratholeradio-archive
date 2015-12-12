@@ -29,6 +29,7 @@ def process_episode(data):
                   for x in item.split(u'\u2013')]
         fields = filter(bool, fields)  # remove empty
         if len(fields) > 0:
+            fields = [x.strip('\n\t- ') for x in fields]
             if len(fields) >= 4:
                 time, artist, title, license = fields[:4]
             elif len(fields) == 3:

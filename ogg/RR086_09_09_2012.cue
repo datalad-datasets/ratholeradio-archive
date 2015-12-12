@@ -22,8 +22,7 @@ TRACK 03 AUDIO
 TRACK 04 AUDIO
  TITLE "Plan C (Rhaft remix)"
  PERFORMER "AV"
- INDEX 01 -
-09:55:00
+ INDEX 01 09:55:00
  COMMENT "License Unknown"
 TRACK 05 AUDIO
  TITLE "Someone Else’s Words"
@@ -33,8 +32,7 @@ TRACK 05 AUDIO
 TRACK 06 AUDIO
  TITLE "Gravitons"
  PERFORMER "Neener"
- INDEX 01 -
-22:05:00
+ INDEX 01 22:05:00
  COMMENT "License Unknown"
 TRACK 07 AUDIO
  TITLE "How High The Moon / I Got Rhythm"
@@ -44,8 +42,7 @@ TRACK 07 AUDIO
 TRACK 08 AUDIO
  TITLE "Dutchman"
  PERFORMER "Surahh"
- INDEX 01 -
-31:56:00
+ INDEX 01 31:56:00
  COMMENT "All Rights Reserved"
 TRACK 09 AUDIO
  TITLE "Everyone Is Fine"

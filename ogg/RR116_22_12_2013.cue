@@ -47,8 +47,7 @@ TRACK 08 AUDIO
 TRACK 09 AUDIO
  TITLE "Snowflake"
  PERFORMER "Theta-Sound"
- INDEX 01 -
-39:52:00
+ INDEX 01 39:52:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 10 AUDIO
  TITLE "Gangster Gamers (Instrumental)"

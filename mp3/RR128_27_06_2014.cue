@@ -37,8 +37,7 @@ TRACK 06 AUDIO
 TRACK 07 AUDIO
  TITLE "We Play Music For 16 Year Old Girls"
  PERFORMER "The Marxmallows"
- INDEX 01 -
-33:58:00
+ INDEX 01 33:58:00
  COMMENT "CC BY-SA Licensed"
 TRACK 08 AUDIO
  TITLE "Fuck It Up"

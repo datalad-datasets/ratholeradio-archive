@@ -22,8 +22,7 @@ TRACK 03 AUDIO
 TRACK 04 AUDIO
  TITLE "I’m Not Her"
  PERFORMER "Jai Lynn"
- INDEX 01 -
-12:05:00
+ INDEX 01 12:05:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 05 AUDIO
  TITLE "Perverting The American Dream"
@@ -33,8 +32,7 @@ TRACK 05 AUDIO
 TRACK 06 AUDIO
  TITLE "Dark Blonde Rises"
  PERFORMER "LiVKi"
- INDEX 01 -
-23:38:00
+ INDEX 01 23:38:00
  COMMENT "CC BY-ND Licensed"
 TRACK 07 AUDIO
  TITLE "Agent P (feat Elsie Lee)"
@@ -44,8 +42,7 @@ TRACK 07 AUDIO
 TRACK 08 AUDIO
  TITLE "Paved With Gold"
  PERFORMER "The Pawns Of Avarice"
- INDEX 01 -
-34:16:00
+ INDEX 01 34:16:00
  COMMENT "CC BY-NC Licensed"
 TRACK 09 AUDIO
  TITLE "We Are The Ones"

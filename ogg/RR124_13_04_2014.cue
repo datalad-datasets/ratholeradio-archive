@@ -42,8 +42,7 @@ TRACK 07 AUDIO
 TRACK 08 AUDIO
  TITLE "Silver"
  PERFORMER "The Gray Havens"
- INDEX 01 -
-35:02:00
+ INDEX 01 35:02:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 09 AUDIO
  TITLE "Chatter (Life in The US under GW Bush)"

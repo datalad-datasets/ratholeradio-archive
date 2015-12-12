@@ -17,8 +17,7 @@ TRACK 02 AUDIO
 TRACK 03 AUDIO
  TITLE "Where Ottersgear Lies"
  PERFORMER "Ottersgear"
- INDEX 01 -
-11:19:00
+ INDEX 01 11:19:00
  COMMENT "All Rights Reserved"
 TRACK 04 AUDIO
  TITLE "King Louie"
@@ -33,8 +32,7 @@ TRACK 05 AUDIO
 TRACK 06 AUDIO
  TITLE "Nugget Man"
  PERFORMER "Paul &amp; Storm"
- INDEX 01 -
-35:59:00
+ INDEX 01 35:59:00
  COMMENT "CC BY-NC Licensed"
 TRACK 07 AUDIO
  TITLE "I Just Wanna Dance (punk version)"

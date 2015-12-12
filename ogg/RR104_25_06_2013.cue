@@ -17,8 +17,7 @@ TRACK 02 AUDIO
 TRACK 03 AUDIO
  TITLE "Close To You"
  PERFORMER "Heifervescent"
- INDEX 01 -
-12:56:00
+ INDEX 01 12:56:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 04 AUDIO
  TITLE "Echos Of The Past"
@@ -28,8 +27,7 @@ TRACK 04 AUDIO
 TRACK 05 AUDIO
  TITLE "Push It"
  PERFORMER "Grace Valhalla"
- INDEX 01 -
-24:22:00
+ INDEX 01 24:22:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 06 AUDIO
  TITLE "Royaphobia (The Fear Of Being Rocked Out)"
@@ -39,8 +37,7 @@ TRACK 06 AUDIO
 TRACK 07 AUDIO
  TITLE "Dancehall Salute"
  PERFORMER "Jammin-Inc"
- INDEX 01 -
-37:58:00
+ INDEX 01 37:58:00
  COMMENT "CC BY-NS-SA Licensed"
 TRACK 08 AUDIO
  TITLE "Lonely Like America (live version)"

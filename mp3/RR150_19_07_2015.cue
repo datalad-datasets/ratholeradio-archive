@@ -42,8 +42,7 @@ TRACK 07 AUDIO
 TRACK 08 AUDIO
  TITLE "The Colour And The Shapes"
  PERFORMER "The Meaning Under"
- INDEX 01 -
-36:08:00
+ INDEX 01 36:08:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 09 AUDIO
  TITLE "New Life"

@@ -27,8 +27,7 @@ TRACK 04 AUDIO
 TRACK 05 AUDIO
  TITLE "Foggy San Francisco Night"
  PERFORMER "Bitter Mystics"
- INDEX 01 -
-22:41:00
+ INDEX 01 22:41:00
  COMMENT "CC BY-SA Licensed"
 TRACK 06 AUDIO
  TITLE "Dishevelled"
