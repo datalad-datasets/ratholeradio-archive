@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Pipeline to fetch/update ratholeradio shows
 """
@@ -8,6 +9,7 @@ from os.path import join as opj, basename
 from datalad.utils import updated
 from datalad.crawler.nodes.annex import Annexificator
 from datalad.crawler.nodes.crawl_url import crawl_url
+from datalad.crawler.nodes.misc import sub
 from datalad.crawler.nodes.matches import a_href_match, css_match
 
 from logging import getLogger
@@ -17,6 +19,8 @@ def process_episode(data):
     # create cue out of
     lgr.info("Processing URL: {url}".format(**data))
     items = []
+    if data['url'].endswith('ep1/'):
+        import pdb; pdb.set_trace()
     # some times \u2014 was used to split up pairs
     for item in data['items']:
         items.extend(item.split(u'\u2014'))
@@ -27,10 +31,20 @@ def process_episode(data):
                   for x in item.split(u'\u2013')]
         fields = filter(bool, fields)  # remove empty
         if len(fields) > 0:
-            if len(fields) == 4:
-                time, artist, title, license = fields
+            if len(fields) >= 4:
+                time, artist, title, license = fields[:4]
             elif len(fields) == 3:
                 time, artist, title = fields
+                license = None
+            elif len(fields) == 2:
+                # e.g. in ep 25 -- list of songs Dan performed
+                time, title = fields
+                if "Originally by" in title:
+                    # Let's do it nice
+                    reg = re.match("(?P<title>.*?)\s*\(Originally by\s*(?P<orig_author>.+)\)\s*")
+                    matches = reg.groupdict()
+                    artist = "Dan Lynch (originally by {orig_author})".format(**matches)
+                    title = matches[title]
                 license = None
             else:
                 lgr.debug("Got %d fields: %s" % (len(fields), str(fields)))
@@ -49,19 +63,50 @@ def process_episode(data):
         # offset first track by 15 sec to account for Dan's overlay
         tracks[0]['time'] = '00:15'
 
-    if tracks:
-        lgr.info("Harvested %d tracks" % (len(tracks)))
-        for ext in ('mp3', 'ogg'):
-            ext_file = opj(ext, data[ext].split('/')[-1])
-            # one episode seemed to have another prevfix -- let's unify
-            if ext_file.startswith('RatholeRadio_'):
-                ext_file = ext_file.replace('RatholeRadio_', 'RR%03d' % data['episode'])
-            # instruct to download/annex the file itself
-            yield {
-                'url': data[ext],
-                'filename': ext_file
-            }
+    lgr.info("Harvested %d tracks" % (len(tracks)))
+    # Some episodes lacked time information about tracks or just few (as in 85)
+    if len(tracks) < 6 and data['episode'] not in {'100', '64', '85'}:
+        # something must have went wrong
+        import pdb; pdb.set_trace()
 
+    for ext in ('mp3', 'ogg'):
+        ext_file = data[ext].split('/')[-1]
+        # early episodes seemed to have another prefix -- let's unify
+        # and also year as two digit later became 4 digit year.
+        # Well -- in data we should have everything but the date, but actually
+        # release month/date some times was different from the file date. So let's
+        # reparse the filename again
+        reg = re.match(
+            "[A-Za-z]+"
+            "(?P<episode>[0-9]+)[-_]"
+            "(?P<date>[0-9]{1,2})[-_]"
+            "(?P<month>[0-9]{1,2})[-_]"
+            "(?P<year>[0-9]{2,4})\.(?P<ext>(mp3|ogg))", ext_file)
+
+        if not reg:
+            raise ValueError("Count not parse %s" % ext_file)
+        parts = reg.groupdict()
+        if len(parts['year']) == 2:
+            parts['year'] = '20' + parts['year']
+        # reconstitute the filename
+        ext_file = "RR{episode:>03s}_{date:>02s}_{month:>02s}_{year}.{ext}".format(**parts)
+
+        # if ext_file.startswith('RatholeRadio_'):
+        #     ext_file = ext_file.replace('RatholeRadio_', 'RR%03d' % data['episode'])
+        #
+        # parts = ext_file.split('_')
+        # if len(parts[-1]) == 6: #  e.g. "_09.mp3"
+        #     parts[-1] = '20' + parts[-1]
+        #     ext_file = '_'.join(parts)
+
+        ext_file = opj(ext, ext_file)
+        # instruct to download/annex the file itself
+        yield {
+            'url': data[ext],
+            'filename': ext_file
+        }
+
+        if tracks:
             cue_file = ext_file[:-4] + '.cue'
             lgr.debug("Composing %s", cue_file)
             data_ = data.copy()
@@ -102,6 +147,7 @@ def pipeline():
     annex = Annexificator(
         create=False,  # must be already initialized etc
         mode='relaxed',
+        allow_dirty=True, # XXX for now
         options=["-c", "annex.largefiles=exclude=*.cue"])
 
     return [
@@ -113,12 +159,22 @@ def pipeline():
             a_href_match(".*/(?P<year>2[0-9]{3})/(?P<month>[0-9]{1,2})/ep(?P<episode>[0-9]+)/?$"),
             crawl_url(),
             [
+                sub({'response': ('</?strong>', ''), # ep 7? used also lots of strongs
+                     'response': ('</?span[^>]*>', ''),  # ep 74 used spans too extensively
+                     'response': (u'(\d{2}:\d{2}) \u2014 ', r'\1 \u2013 '), # ep 7 used long dash which later was used to bind pairs
+                     }),
                 css_match('div#page .entry',
-                          xpaths={'items': '//p',
-                                  'mp3': "//a[text()='Download Mp3']//@href",
-                                  'ogg': "//a[text()='Download Ogg']//@href",
-                                  },
+                          xpaths={'items': u"//*[contains(text(), '–')]",
+                                  #'mp3': "//a[text()='Download Mp3']//@href",
+                                  #'ogg': "//a[text()='Download Ogg']//@href",
+                                  # 'mp3': "//a[re:test(text(), '^\s*Download Mp3\s*$')]//@href",
+                                  # 'ogg': "//a[re:test(text(), '^\s*Download Ogg\s*$')]//@href",
+                                 },
                           allow_multiple=True),
+                css_match('div#page .entry',
+                          xpaths={'mp3': "//a[re:test(@href, '.*\.mp3$')]//@href",
+                                  'ogg': "//a[re:test(@href, '.*\.ogg$')]//@href",
+                                  }),
                 process_episode,
                 annex
             ],

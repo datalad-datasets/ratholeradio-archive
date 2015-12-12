@@ -10,7 +10,42 @@ TRACK 01 AUDIO
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
 TRACK 02 AUDIO
+ TITLE "Crazy Momma"
+ PERFORMER "Nick Tann"
+ INDEX 01 07:31:00
+ COMMENT "License Unknown"
+TRACK 03 AUDIO
+ TITLE "Space Echo"
+ PERFORMER "I’m Bad Like Jesse James"
+ INDEX 01 11:57:00
+ COMMENT "CC BY-NC-ND Licensed"
+TRACK 04 AUDIO
+ TITLE "Beneath The Gate"
+ PERFORMER "Stormy Mondays"
+ INDEX 01 36:15:00
+ COMMENT "CC BY-NC-ND Licensed"
+TRACK 05 AUDIO
+ TITLE "Dancing On The Slope"
+ PERFORMER "Visciera"
+ INDEX 01 41:45:00
+ COMMENT "CC BY-NC-SA Licensed"
+TRACK 06 AUDIO
  TITLE "Girl In A Room Remix"
  PERFORMER "Antiqcool"
  INDEX 01 45:30:00
  COMMENT "CC BY-NC-ND Licensed"
+TRACK 07 AUDIO
+ TITLE "Enemies (Rough mix, pre-release)"
+ PERFORMER "20lb Sounds"
+ INDEX 01 54:42:00
+ COMMENT "CC BY-SA Licensed"
+TRACK 08 AUDIO
+ TITLE "New August"
+ PERFORMER "Ragz Nordset"
+ INDEX 01 61:07:00
+ COMMENT "All Rights Reserved"
+TRACK 09 AUDIO
+ TITLE "No Time To Waste"
+ PERFORMER "FM Pilots"
+ INDEX 01 70:10:00
+ COMMENT "CC BY-NC-SA Licensed"

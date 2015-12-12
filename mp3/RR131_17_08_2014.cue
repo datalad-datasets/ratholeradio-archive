@@ -26,27 +26,37 @@ TRACK 04 AUDIO
 12:15:00
  COMMENT "CC BY-SA Licensed"
 TRACK 05 AUDIO
+ TITLE "And Now We Stand Against The Wall"
+ PERFORMER "Garmisch"
+ INDEX 01 20:58:00
+ COMMENT "CC BY-NC-ND Licensed"
+TRACK 06 AUDIO
  TITLE "Late In The Game"
  PERFORMER "20lb Sounds"
  INDEX 01 -
 28:04:00
  COMMENT "CC BY-SA Licensed"
-TRACK 06 AUDIO
+TRACK 07 AUDIO
  TITLE "Hoarder Song- CC BY-NC-SA Licensed"
  PERFORMER "David Rovics"
  INDEX 01 35:36:00
  COMMENT "Off his recent album of the same name."
-TRACK 07 AUDIO
+TRACK 08 AUDIO
+ TITLE "Low"
+ PERFORMER "Lorenzo’s Music"
+ INDEX 01 38:04:00
+ COMMENT "CC BY-SA Licensed"
+TRACK 09 AUDIO
  TITLE "Blue"
  PERFORMER "Emerald Park"
  INDEX 01 45:36:00
  COMMENT "CC BY-SA Licensed"
-TRACK 08 AUDIO
+TRACK 10 AUDIO
  TITLE "Justice Is My Name"
  PERFORMER "Cletus Got Shot"
  INDEX 01 51:43:00
  COMMENT "CC BY-NC-SA Licensed"
-TRACK 09 AUDIO
+TRACK 11 AUDIO
  TITLE "Your Nasty Love"
  PERFORMER "T-Bird &amp; The Breaks"
  INDEX 01 60:48:00
