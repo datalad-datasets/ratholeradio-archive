@@ -3,6 +3,7 @@ Pipeline to fetch/update ratholeradio shows
 """
 from __future__ import print_function
 import re
+from os.path import join as opj
 
 from datalad.utils import updated
 from datalad.crawler.nodes.annex import Annexificator
@@ -32,7 +33,7 @@ def process_episode(data):
                 time, artist, title = fields
                 license = None
             else:
-                lgr.warning("Got %d fields: %s" % (len(fields), str(fields)))
+                lgr.debug("Got %d fields: %s" % (len(fields), str(fields)))
                 continue
             # Let's just write that time
             try:
@@ -49,12 +50,16 @@ def process_episode(data):
         tracks[0]['time'] = '00:10'
 
     if tracks:
-        mp3_file = data['mp3'][0].split('/')[-1]
-        assert(mp3_file.endswith('.mp3'))
-        lgr.info("Harvested %d tracks for the %s" % (len(tracks), mp3_file))
+        lgr.info("Harvested %d tracks" % (len(tracks)))
         for ext in ('mp3', 'ogg'):
-            ext_file = mp3_file.replace('.mp3', '.' + ext)
-            cue_file = mp3_file.replace('.mp3', '_%s.cue' % ext)
+            ext_file = opj(ext, data[ext].split('/')[-1])
+            # instruct to download/annex the file itself
+            yield {
+                'url': data[ext],
+                'filename': ext_file
+            }
+
+            cue_file = ext_file[:-4] + '.cue'
             lgr.debug("Composing %s", cue_file)
             data_ = data.copy()
             data_['EXT'] = ext.upper()
@@ -70,6 +75,7 @@ TRACK 01 AUDIO
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
 """.format(**data_).encode('utf-8'))
+
                 for i, track in enumerate(tracks, 2):
                     track_entry = u"""\
 TRACK {index:02d} AUDIO
@@ -78,9 +84,11 @@ TRACK {index:02d} AUDIO
  INDEX 01 {time}:00
 """.format(index=i, **track)
                     f.write(track_entry.encode('utf-8'))
-            out = updated(data, dict(filename=cue_file))
-            out.pop('url')  # URL is no longer associated with this file
-            yield out
+            # we just need to annex the cue_file, no other information to be passed
+            yield {
+                'filename': cue_file
+            }
+
 
 
 def pipeline():
@@ -100,13 +108,15 @@ def pipeline():
         [
             css_match('div#page .entry',
                       xpaths={'items': '//p',
-                              'mp3': "//a[contains(@href, '.mp3')]//@href"},
+                              'mp3': "//a[text()='Download Mp3']//@href",
+                              'ogg': "//a[text()='Download Ogg']//@href",
+                              },
                       allow_multiple=True),
             process_episode,
             annex
         ],
-        [
-            a_href_match('.*/RR.*\.(ogg|mp3)'),
-            annex
-        ]
+        # [
+        #     a_href_match('.*/RR.*\.(ogg|mp3)'),
+        #     annex
+        # ]
     ]
