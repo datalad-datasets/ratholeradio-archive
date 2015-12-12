@@ -9,8 +9,10 @@ episodes.  Such arrangement opens a number of opportunities
  
  - `git grep PHRASE` to e.g. find episodes with your favorite bands or titles you might remember
   
- - Listening to those episodes with some .cue-capable player (e.g., [qmmp](http://qmmp.ylsoftware.com))
-   which would allow you to navigate around the episode
+ - `git annex get EPISODE_OF_INTEREST.mp3` (or `.ogg`) to fetch the content of the episode
+
+ - Listen to those episodes with some player supporting .cue sheets 
+   (e.g., [qmmp](http://qmmp.ylsoftware.com)) which would allow you to navigate around the episode
 
 Disclaimer: There might still be broken and missing entries.  If you spot some, please file an issue on
 [github](https://github.com/datalad/ratholeradio-archive/issues).
