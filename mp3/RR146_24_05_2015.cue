@@ -5,14 +5,14 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 146"
 FILE "RR146_24_05_2015.mp3" MP3
 TRACK 01 AUDIO
- TITLE "Introduction"
+ TITLE "http://ratholeradio.org Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
 TRACK 02 AUDIO
  TITLE "Randall Scandal"
  PERFORMER "Maze"
- INDEX 01 00:10:00
+ INDEX 01 00:15:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 03 AUDIO
  TITLE "A Little While"

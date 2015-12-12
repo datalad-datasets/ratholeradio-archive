@@ -1,0 +1,42 @@
+REM GENRE "Eclectic music from around the web"
+REM DATE "2014"
+PERFORMER "Dan Lynch"
+ALBUMARTIST "Dan Lynch"
+TITLE "Rathole Radio ep. 120"
+FILE "RR120_16_02_2014.mp3" MP3
+TRACK 01 AUDIO
+ TITLE "http://ratholeradio.org Introduction"
+ PERFORMER "Dan Lynch"
+ INDEX 01 00:00:00
+ COMMENT "http://ratholeradio.org"
+TRACK 02 AUDIO
+ TITLE "Be Love"
+ PERFORMER "Kris Roche"
+ INDEX 01 06:48:00
+ COMMENT "CC BY-NC-SA Licensed"
+TRACK 03 AUDIO
+ TITLE "Papillons"
+ PERFORMER "WhiteRoom"
+ INDEX 01 -
+37:23:00
+ COMMENT "CC BY-SA Licensed"
+TRACK 04 AUDIO
+ TITLE "The Ghost Of Emma Goldman"
+ PERFORMER "Fit &amp; The Conniptions"
+ INDEX 01 45:42:00
+ COMMENT "CC BY-SA Licensed"
+TRACK 05 AUDIO
+ TITLE "Letters To A Young Girl"
+ PERFORMER "Staggered Crossing"
+ INDEX 01 47:30:00
+ COMMENT "CC BY-ND Licensed"
+TRACK 06 AUDIO
+ TITLE "When The Penny Dropped"
+ PERFORMER "Fit &amp; The Conniptions"
+ INDEX 01 54:14:00
+ COMMENT "CC BY-SA Licensed"
+TRACK 07 AUDIO
+ TITLE "Love You Don’t Go"
+ PERFORMER "Jek[k]"
+ INDEX 01 59:40:00
+ COMMENT "CC BY-NC-ND Licensed"

@@ -5,14 +5,14 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 145"
 FILE "RR145_10_05_2015.mp3" MP3
 TRACK 01 AUDIO
- TITLE "Introduction"
+ TITLE "http://ratholeradio.org Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
 TRACK 02 AUDIO
  TITLE "Apathetic"
  PERFORMER "Burning Bright"
- INDEX 01 00:10:00
+ INDEX 01 00:15:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 03 AUDIO
  TITLE "I Will Crawl"

@@ -5,14 +5,14 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 143"
 FILE "RR143_29_03_2015.ogg" OGG
 TRACK 01 AUDIO
- TITLE "Introduction"
+ TITLE "http://ratholeradio.org Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
 TRACK 02 AUDIO
  TITLE "Trona"
  PERFORMER "VaDeBo"
- INDEX 01 00:10:00
+ INDEX 01 00:15:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 03 AUDIO
  TITLE "So I Said You Died (No Words)"

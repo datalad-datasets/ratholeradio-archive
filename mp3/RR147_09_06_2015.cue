@@ -5,14 +5,14 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 147"
 FILE "RR147_09_06_2015.mp3" MP3
 TRACK 01 AUDIO
- TITLE "Introduction"
+ TITLE "http://ratholeradio.org Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
 TRACK 02 AUDIO
  TITLE "General Strike"
  PERFORMER "Farmertan"
- INDEX 01 00:10:00
+ INDEX 01 00:15:00
  COMMENT "CC BY-NC-SA Licensed"
 TRACK 03 AUDIO
  TITLE "Mr Skyscraper"

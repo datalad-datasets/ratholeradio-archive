@@ -5,14 +5,14 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 151"
 FILE "RR151_02_08_2015.ogg" OGG
 TRACK 01 AUDIO
- TITLE "Introduction"
+ TITLE "http://ratholeradio.org Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
 TRACK 02 AUDIO
  TITLE "Hunger For Life"
  PERFORMER "The Nuri"
- INDEX 01 00:10:00
+ INDEX 01 00:15:00
  COMMENT "CC BY-NC-ND Licensed"
 TRACK 03 AUDIO
  TITLE "Sporting Rhymes"

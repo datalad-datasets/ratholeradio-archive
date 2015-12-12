@@ -53,6 +53,9 @@ def process_episode(data):
         lgr.info("Harvested %d tracks" % (len(tracks)))
         for ext in ('mp3', 'ogg'):
             ext_file = opj(ext, data[ext].split('/')[-1])
+            # one episode seemed to have another prevfix -- let's unify
+            if ext_file.startswith('RatholeRadio_'):
+                ext_file = ext_file.replace('RatholeRadio_', 'RR%03d' % data['episode'])
             # instruct to download/annex the file itself
             yield {
                 'url': data[ext],
