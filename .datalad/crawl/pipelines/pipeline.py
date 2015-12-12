@@ -91,14 +91,6 @@ def process_episode(data):
         # reconstitute the filename
         ext_file = "RR{episode:>03s}_{date:>02s}_{month:>02s}_{year}.{ext}".format(**parts)
 
-        # if ext_file.startswith('RatholeRadio_'):
-        #     ext_file = ext_file.replace('RatholeRadio_', 'RR%03d' % data['episode'])
-        #
-        # parts = ext_file.split('_')
-        # if len(parts[-1]) == 6: #  e.g. "_09.mp3"
-        #     parts[-1] = '20' + parts[-1]
-        #     ext_file = '_'.join(parts)
-
         ext_file = opj(ext, ext_file)
         # instruct to download/annex the file itself
         yield {
@@ -143,17 +135,16 @@ TRACK {index:02d} AUDIO
 
 
 def pipeline():
-    lgr.info("Creating a pipeline for the ratholeradio")
+    lgr.info("Creating a pipeline for the ratholeradio.org podcasts")
     annex = Annexificator(
         create=False,  # must be already initialized etc
         mode='relaxed',
-        allow_dirty=True, # XXX for now
+        allow_dirty=True,  # XXX for now
         options=["-c", "annex.largefiles=exclude=*.cue"])
 
     return [
         [
             crawl_url("http://ratholeradio.org",
-            #crawl_url("http://ratholeradio.org/page/17/",
                       matchers=[
                           a_href_match('.*/page/[0-9]+'),
                       ]),
@@ -161,21 +152,17 @@ def pipeline():
             crawl_url(),
             [
                 sub({'response': {
-                        '</?strong>': '', # ep 7? used also lots of strongs
+                        '</?strong>': '',  # ep 7? used also lots of strongs
                         '</?span[^>]*>': '',  # ep 74 used spans too extensively
                         # in raw HTML at this point
                         r'(\d{2}:\d{2}) &#8212;': r'\1 &#8211;', # ep 7 used long dash which later was used to bind pairs
-                        #r'(\d{2}:\d{2}) \u2014': r'\1 \u2013' # ep 7 used long dash which later was used to bind pairs
                         }
                     }),
+                # Items which might contain tracks information
                 css_match('div#page .entry',
-                          xpaths={'items': u"//*[contains(text(), '–')]",
-                                  #'mp3': "//a[text()='Download Mp3']//@href",
-                                  #'ogg': "//a[text()='Download Ogg']//@href",
-                                  # 'mp3': "//a[re:test(text(), '^\s*Download Mp3\s*$')]//@href",
-                                  # 'ogg': "//a[re:test(text(), '^\s*Download Ogg\s*$')]//@href",
-                                 },
+                          xpaths={'items': u"//*[contains(text(), '–')]"},
                           allow_multiple=True),
+                # URLs to download mp3/ogg.
                 css_match('div#page .entry',
                           xpaths={'mp3': "//a[re:test(@href, '.*\.mp3$')]//@href",
                                   'ogg': "//a[re:test(@href, '.*\.ogg$')]//@href",
@@ -184,5 +171,5 @@ def pipeline():
                 annex
             ],
         ],
-        annex.finalize
+        annex.finalize  # isn't triggered atm -- BUG
     ]
