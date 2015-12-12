@@ -46,8 +46,8 @@ def process_episode(data):
         tracks.append({'time': time, 'artist': artist, 'title': title, 'license': license})
 
     if tracks and tracks[0]['time'].lstrip('0') == ':00':
-        # offset first track by 10 sec to account for Dan's overlay
-        tracks[0]['time'] = '00:10'
+        # offset first track by 15 sec to account for Dan's overlay
+        tracks[0]['time'] = '00:15'
 
     if tracks:
         lgr.info("Harvested %d tracks" % (len(tracks)))
@@ -72,7 +72,7 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. {episode}"
 FILE "{ext_file}" {EXT}
 TRACK 01 AUDIO
- TITLE "Introduction"
+ TITLE "http://ratholeradio.org Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
@@ -86,7 +86,7 @@ TRACK {index:02d} AUDIO
  INDEX 01 {time}:00
 """.format(index=i, **track)
                     if track['license']:
-                        track_entry += """ COMMENT "{license}"\n""".format(**track)
+                        track_entry += u""" COMMENT "{license}"\n""".format(**track)
                     f.write(track_entry.encode('utf-8'))
             # we just need to annex the cue_file, no other information to be passed
             yield {
@@ -102,21 +102,23 @@ def pipeline():
         options=["-c", "annex.largefiles=exclude=*.cue"])
 
     return [
-        crawl_url("http://ratholeradio.org",
-                  matchers=[
-#                      a_href_match('.*/page/[0-9]+'),
-                  ]),
-        a_href_match(".*/(?P<year>2[0-9]{3})/(?P<month>[0-9]{1,2})/ep(?P<episode>[0-9]+)/?$"),
-        crawl_url(),
         [
-            css_match('div#page .entry',
-                      xpaths={'items': '//p',
-                              'mp3': "//a[text()='Download Mp3']//@href",
-                              'ogg': "//a[text()='Download Ogg']//@href",
-                              },
-                      allow_multiple=True),
-            process_episode,
-            annex
+            crawl_url("http://ratholeradio.org",
+                      matchers=[
+                          a_href_match('.*/page/[0-9]+'),
+                      ]),
+            a_href_match(".*/(?P<year>2[0-9]{3})/(?P<month>[0-9]{1,2})/ep(?P<episode>[0-9]+)/?$"),
+            crawl_url(),
+            [
+                css_match('div#page .entry',
+                          xpaths={'items': '//p',
+                                  'mp3': "//a[text()='Download Mp3']//@href",
+                                  'ogg': "//a[text()='Download Ogg']//@href",
+                                  },
+                          allow_multiple=True),
+                process_episode,
+                annex
+            ],
         ],
         annex.finalize
     ]
