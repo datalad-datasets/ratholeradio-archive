@@ -44,6 +44,10 @@ def process_episode(data):
             continue
         tracks.append({'time': time, 'artist': artist, 'title': title, 'license': license})
 
+    if tracks and tracks[0]['time'].lstrip('0') == ':00':
+        # offset first track by 10 sec to account for Dan's overlay
+        tracks[0]['time'] = '00:10'
+
     if tracks:
         mp3_file = data['mp3'][0].split('/')[-1]
         assert(mp3_file.endswith('.mp3'))
@@ -56,7 +60,7 @@ def process_episode(data):
             data_['EXT'] = ext.upper()
             data_['ext_file'] = ext_file
             with open(cue_file, 'w') as f:
-                f.write("""REM GENRE "Eclectic music from around the web"
+                f.write(u"""REM GENRE "Eclectic music from around the web"
 REM DATE "{year}"
 PERFORMER "Dan Lynch"
 TITLE "Episode {episode}"
@@ -65,17 +69,19 @@ TRACK 01 AUDIO
  TITLE "Introduction"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
-""".format(**data_))
+""".format(**data_).encode('utf-8'))
                 for i, track in enumerate(tracks, 2):
-                    f.write("""\
+                    track_entry = u"""\
 TRACK {index:02d} AUDIO
  TITLE "{title}"
  PERFORMER "{artist}"
  INDEX 01 {time}:00
-""".format(index=i, **track))
+""".format(index=i, **track)
+                    f.write(track_entry.encode('utf-8'))
             out = updated(data, dict(filename=cue_file))
             out.pop('url')  # URL is no longer associated with this file
             yield out
+
 
 def pipeline():
     lgr.info("Creating a pipeline for the ratholeradio")
@@ -91,14 +97,6 @@ def pipeline():
                   ]),
         a_href_match(".*/(?P<year>2[0-9]{3})/(?P<month>[0-9]{1,2})/ep(?P<episode>[0-9]+)/?$"),
         crawl_url(),
-        # a_href_match(".*/RR.*\.(ogg|mp3)"),  # then would be one per each file
-        # css_match('div#page .entry',
-        #           xpaths={
-        #               'items': '//p',
-        #               'links': '//a',
-        #               'mp3_urls': "//a[contains(@href, '.mp3')]//@href"
-        #           },
-        #           allow_multiple=True),
         [
             css_match('div#page .entry',
                       xpaths={'items': '//p',
