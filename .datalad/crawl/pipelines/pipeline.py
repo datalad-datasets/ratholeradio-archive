@@ -26,11 +26,12 @@
   THE SOFTWARE.
 """
 
+from __future__ import print_function
+
 __author__ = 'Yaroslav Halchenko'
 __copyright__ = 'Copyright (c) 2015 Yaroslav Halchenko'
 __license__ = 'MIT'
 
-from __future__ import print_function
 import re
 from os.path import join as opj, basename
 
@@ -113,7 +114,7 @@ def process_episode(data):
         if not reg:
             raise ValueError("Could not parse %s" % ext_file)
         parts = reg.groupdict()
-        if not 'episode' in parts:
+        if not 'episode' in parts or not parts['episode']:
             parts['episode'] = data['episode']
         if len(parts['year']) == 2:
             parts['year'] = '20' + parts['year']
@@ -167,7 +168,7 @@ def pipeline():
     lgr.info("Creating a pipeline for the ratholeradio.org podcasts")
     annex = Annexificator(
         create=False,  # must be already initialized etc
-        mode='relaxed',
+        mode='fast',
         allow_dirty=True,  # XXX for now
         options=["-c", "annex.largefiles=exclude=*.cue"])
 

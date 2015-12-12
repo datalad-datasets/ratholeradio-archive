@@ -3,7 +3,7 @@ REM DATE "2009"
 PERFORMER "Dan Lynch"
 ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 1"
-FILE "RRNone_31_05_2009.mp3" MP3
+FILE "RR001_31_05_2009.ogg" OGG
 TRACK 01 AUDIO
  TITLE "http://ratholeradio.org Introduction"
  PERFORMER "Dan Lynch"
