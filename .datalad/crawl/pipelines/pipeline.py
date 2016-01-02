@@ -93,7 +93,7 @@ def process_episode(data):
 
     lgr.info("Harvested %d tracks" % (len(tracks)))
     # Some episodes lacked time information about tracks or just few (as in 85)
-    if len(tracks) < 6 and data['episode'] not in {'100', '64', '85'}:
+    if len(tracks) < 6 and data['episode'] not in {'152', '100', '64', '85'}:
         # something must have went wrong
         import pdb; pdb.set_trace()
 
