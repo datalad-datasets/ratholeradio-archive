@@ -17,5 +17,5 @@ TRACK 02 AUDIO
 TRACK 03 AUDIO
  TITLE "Complicated Man"
  PERFORMER "Lejo Harmeson &amp; Essence"
- INDEX 01 00:00:00
+ INDEX 01 08:21:00
  COMMENT "CC BY-SA Licensed"
