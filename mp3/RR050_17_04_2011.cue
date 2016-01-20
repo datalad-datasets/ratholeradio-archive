@@ -5,7 +5,7 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 50"
 FILE "RR050_17_04_2011.mp3" MP3
 TRACK 01 AUDIO
- TITLE "http://ratholeradio.org Introduction"
+ TITLE "http://ratholeradio.org Introduction ep. 50"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"

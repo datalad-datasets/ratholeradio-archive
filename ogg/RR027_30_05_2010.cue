@@ -5,7 +5,7 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 27"
 FILE "RR027_30_05_2010.ogg" OGG
 TRACK 01 AUDIO
- TITLE "http://ratholeradio.org Introduction"
+ TITLE "http://ratholeradio.org Introduction ep. 27"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"

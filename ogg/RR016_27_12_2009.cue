@@ -5,7 +5,7 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 16"
 FILE "RR016_27_12_2009.ogg" OGG
 TRACK 01 AUDIO
- TITLE "http://ratholeradio.org Introduction"
+ TITLE "http://ratholeradio.org Introduction ep. 16"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"

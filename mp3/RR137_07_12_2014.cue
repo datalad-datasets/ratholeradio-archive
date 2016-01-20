@@ -5,7 +5,7 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. 137"
 FILE "RR137_07_12_2014.mp3" MP3
 TRACK 01 AUDIO
- TITLE "http://ratholeradio.org Introduction"
+ TITLE "http://ratholeradio.org Introduction ep. 137"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
