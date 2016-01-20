@@ -142,7 +142,7 @@ ALBUMARTIST "Dan Lynch"
 TITLE "Rathole Radio ep. {episode}"
 FILE "{ext_file}" {EXT}
 TRACK 01 AUDIO
- TITLE "http://ratholeradio.org Introduction"
+ TITLE "http://ratholeradio.org Introduction ep. {episode}"
  PERFORMER "Dan Lynch"
  INDEX 01 00:00:00
  COMMENT "http://ratholeradio.org"
